@@ -1,4 +1,4 @@
- //SecondVariant
+ //Second Variant of Homework
 
  beforeEach(()=> { 
     cy.visit('https://sanitarskyi-ngx-admin.herokuapp.com/');
