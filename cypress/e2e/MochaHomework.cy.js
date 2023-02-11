@@ -1,5 +1,6 @@
 
-    //FirstVariant
+    //First Variant of Homework
+
     const data = [
         {EmailAddress: 1, NewEmail: 1},
         {EmailAddress: 2, NewEmail: 2},
