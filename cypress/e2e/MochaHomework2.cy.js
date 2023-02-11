@@ -8,31 +8,22 @@
   })
 
  const data = [
-    {EmailAddress: 1, NewEmail: 1},
-    {EmailAddress: 2, NewEmail: 2},
-    {EmailAddress: 3, NewEmail: 3},
-    {EmailAddress: 'Mira', NewEmail: 'Mira'}
+    {EmailAddress: 1, Password: 1},
+    {EmailAddress: 2, Password: 2},
+    {EmailAddress: 3, Password: 3},
+    {EmailAddress: 'Miroslava_yankovska@uker.net', Password: '1234qwer'}
 ]
 
-const data1 = [
-    {Password: 1, NewPassword: 1},
-    {Password: 2, NewPassword: 2},
-    {Password: 3, NewPassword: 3},
-    {Password: 'Mira', NewPassword: 'Mira'}   
-]
-    data.forEach(({EmailAddress, NewEmail}) => {
+    data.forEach(({EmailAddress, Password}) => {
         it(`Search Email ${data}`, () => {
 
-            cy.get('#exampleInputEmail1').type(`${EmailAddress}`);
-            cy.get('#exampleInputEmail1').should ("contain.value", `${NewEmail}`)
-        })
-      })
- 
-      data1.forEach(({Password, NewPassword}) => {
-        it(`Search Email ${data}`, () => {
+            cy.get('#exampleInputEmail1')
+            .type(`${EmailAddress}`)
+            .should ("contain.value", `${EmailAddress}`);
 
-            cy.get('[id="exampleInputPassword1"]').type(`${Password}`);
-            cy.get('[id="exampleInputPassword1"]').should ("contain.value", `${NewPassword}`)
+            cy.get('[id="exampleInputPassword1"]')
+            .type(`${Password}`)
+            .should ("contain.value", `${Password}`)
         })
       })
 
@@ -43,6 +34,5 @@ const data1 = [
     
       })
     
+    
  
-
-          
